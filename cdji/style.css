@@ -1,0 +1,12 @@
+body{
+    background-color: palevioletred;
+    text-align:center;
+    background-image: no-repeat;
+    background-size: cover;
+    font-weight: 700;
+    font-size: 20px;
+}
+
+img{
+    margin: auto;
+}
