@@ -24,7 +24,7 @@ var hp =100;
     }
 
     function updateimg(){
-        document.getElementById("kot").src="złykiteł.jpg";
+        document.getElementById("kot").src="https://media.discordapp.net/attachments/768055060567293962/776899946602430564/tenor.gif";
     }
 
     function updatebg(){
