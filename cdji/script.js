@@ -58,3 +58,27 @@ var hp =100;
         }
         document.getElementById("randomEvent").innerHTML= evnt;
     }
+function hitk(dmg,bns){
+        hp -= (dmg + bns);
+        document.getElementById("lifemeterk").innerHTML= "Cat life:"+ hp;
+            if (hp < 1){
+                hp=0;
+                document.getElementById("catstatus").innerHTML= "Pokonałeś BOSSA"; 
+                updateimg1(); updatebg2();
+            }
+
+            else{
+                document.getElementById("catstatus").innerHTML= "WALCZ";
+            }
+        document.getElementById("lifemeterk").innerHTML= "Cat life:" + hp;
+    }
+
+    function updateimg1(){
+        document.getElementById("kot").src="bez.png";
+    }
+
+    function updatebg2(){
+        document.body.style.backgroundImage = "url('s.jpg')";
+    }
+
+
