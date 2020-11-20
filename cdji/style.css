@@ -5,8 +5,33 @@ body{
     background-size: cover;
     font-weight: 700;
     font-size: 20px;
+    margin: auto;
+}
+#container{
+    height: 700px;
+    width: 1802px;
+    margin: auto;
+    border: solid black 1px;
+}
+header{
+    width:width: 1802px; 
+    height: 40px;
 }
 
 img{
     margin: auto;
+}
+section{
+    float:left;
+    width: 600px;
+    height: 630px;
+    border: solid black 1px;
+    padding:5px;
+}
+footer{
+    clear: both;
+}
+*{
+    box-sizing: border-box;
+    
 }
