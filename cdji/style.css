@@ -14,7 +14,7 @@ body{
     border: solid black 1px;
 }
 header{
-    width:width: 1802px; 
+    width:1802px; 
     height: 40px;
 }
 
@@ -35,3 +35,22 @@ footer{
     box-sizing: border-box;
     
 }
+
+button.invButton {
+    color: var(--main-text-color);
+    
+}
+
+.border {
+    border: 3px solid white;
+    border-radius: 5px;
+    width: 100px;
+}
+
+#invWindow{
+    margin: auto;
+}
+#invList{
+    margin: auto;
+}
+
