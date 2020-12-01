@@ -4,33 +4,39 @@
     <meta charset="UTF-8">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
+	<link rel="shortcut icon" href="kot3.ico" type="image/x-icon" />
 </head>
 <body>
     <div id="container">
         <header>Projekt</header>
             <section>
-                aaaa
+            <img src="es.png " width="550" height="350">
             </section>
             <section>
             <img id="kot" src="kotek.gif"> 
             
-            <p id="lifemeterp">Player life: 100</p>
-            <p id="lifemeterk">Cat life:100</p>
-            <p id="randomEvent">random</p>
-                <button onclick="hit(10,0)">głaskanie</button>
-                <button onclick="hit(20,1)">dotykanie</button>
-                <button onclick="saszeta()">saszeta</button>
-                <button onclick="hitk(12,3)">ogórek</button>
-                <button onclick="hitk(22,4)">odkurzacz</button>
+            <p id="hpp">Player life: 100</p>
+            <p id="hpk">Cat life:100</p>
+            <p id="rndmevent">random</p>
+            <button onclick="randomEvent()">RANDOM EVENT</button>
+            <button onclick="saszeta()">Saszeta</button>
+
                 <p id="catstatus"></p>
                 <p id="playerstatus"></p>
-            <script src="script.js">
-            </script>
+            
             </section>
             <section>
-                aaaa
+            <p id="invWindow" class="inv border">Odkurzacz</p> 
+        
+            <button class="invButton border" onclick="invUse()">USE</button>	
+            <button class="invButton border" onclick="invChange(-1)"><</button>
+            <button class="invButton border" onclick="invChange(1)">></button>
+            
+            <p id="invList" class="inv border">Odkurzacz<br>Ogórek<br>Cytryna<br></p> 
             </section>
             <footer>&copy; 2020</footer>
     </div>
+    <script src="script.js"></script>
 </body>
 </html>
+
