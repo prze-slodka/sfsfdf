@@ -5,7 +5,6 @@ var invindx = 0;
     {
         hp += (dmg + bns);
         document.getElementById("hpp").innerHTML= "Player life:" + hp;
-        randomEvent();
             if ( hp < 1 ){
                 hp=0;
                 document.getElementById("playerstatus").innerHTML= "Zadrapany na śmierć";
@@ -21,7 +20,7 @@ var invindx = 0;
             document.getElementById("hpp").innerHTML= "Player life:" + hp;
     }
     function saszeta() {
-        hp += 1;
+        hp += 10;
         document.getElementById("hpp").innerHTML= "Player life:" + hp;
             if ( hp > 100)
             hp=100;
@@ -41,13 +40,14 @@ var invindx = 0;
     function invUse() {
         switch (inv[invindx]) {
             case "Cytryna":
-                hitk(0,-10);
+                hitk(-10,0);
+                console.log("użyłaś cytryny");
                 break;
             case "Ogórek":
-                hitk(0,-7);
+                hitk(-7,0);
                 break;
             case "Odkurzacz":
-                hitk(0,-15);
+                hitk(-15,0);
                 break;
             case "Mleko":
                 hit(0,10);
@@ -110,6 +110,7 @@ function randomEvent() {
             case 5:
                 document.getElementById("rndmevent").innerHTML = "Znalazłeś Mięsko!";
                 inv.push("Mięsko");
+                console.log("Znalazłeś Mięsko!");
                 invListing();
                 break;
             case 6:
@@ -124,15 +125,17 @@ function randomEvent() {
                 break;
             case 8:
                 document.getElementById("rndmevent").innerHTML = "Nic się nie stało.";
-                hit(0,0)
+                hit(0,0);
                 break;
             case 9:
                 document.getElementById("rndmevent").innerHTML = "Rozzłościłeś kitku!";
                 hit(0,-10);
+                console.log("Rozzłościłeś kitku!");
                 break; 
             case 10:
                 document.getElementById("rndmevent").innerHTML = "Nadepnałeś kotu na ogon!";
-                hit(0,-13);
+                hit(-13,0);
+                console.log("Nadepnałeś kotu na ogon!");
                 break;
             default:
                 document.getElementById("rndmevent").innerHTML = "default";
@@ -165,5 +168,3 @@ function randomEvent() {
     function updatebg2(){
         document.body.style.backgroundImage = "url('confetti.gif')";
     }
-
-
