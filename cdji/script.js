@@ -90,50 +90,49 @@ var invindx = 0;
         document.getElementById("invList").innerHTML = invL;
     }
  
-    function randomEvent() {
-        switch (Math.ceil(Math.random()*10)) {
-            case 1:
-                document.getElementById("rndmevent").innerHTML = "Znalazłeś cytrynę!";
-                inv.push("Cytryna");
-                invListing();
-                break;
-            case 2:
-            case 3:
-                document.getElementById("rndmevent").innerHTML = "Znalazłeś Mleko!";
-                inv.push("Mleko");
-                invListing();
-                break;
+function randomEvent() {
+    switch (Math.ceil(Math.random()*10)) {
+        case 1:
+            document.getElementById("rndmevent").innerHTML = "Znalazłeś cytrynę!";
+            inv.push("Cytryna");
+            invListing();
+            break;
+        case 2:
+        case 3:
+            document.getElementById("rndmevent").innerHTML = "Znalazłeś Mleko!";
+            inv.push("Mleko");
+            invListing();
+            break;
             case 4:
+                document.getElementById("rndmevent").innerHTML = "Obudziłeś śpiącego kitku!";
+                hit(0,-7);
+                break;
             case 5:
-            case 6:
                 document.getElementById("rndmevent").innerHTML = "Znalazłeś Mięsko!";
                 inv.push("Mięsko");
                 invListing();
                 break;
-            case 7:
+            case 6:
                 document.getElementById("rndmevent").innerHTML = "Znalazłeś ogórek!";
                 inv.push("Ogórek");
                 invListing();
                 break;
-            case 8:
+            case 7:
                 document.getElementById("rndmevent").innerHTML = "Znalazłeś odkurzacz!";
                 inv.push("Odkurzacz");
                 invListing();
                 break;
-            case 9:
+            case 8:
                 document.getElementById("rndmevent").innerHTML = "Nic się nie stało.";
+                hit(0,0)
                 break;
-            case 10:
+            case 9:
                 document.getElementById("rndmevent").innerHTML = "Rozzłościłeś kitku!";
                 hit(0,-10);
                 break; 
-            case 11:
+            case 10:
                 document.getElementById("rndmevent").innerHTML = "Nadepnałeś kotu na ogon!";
                 hit(0,-13);
-                break;
-            case 10:
-                document.getElementById("rndmevent").innerHTML = "Obudziłeś śpiącego kitku!";
-                hit(0,-10);
                 break;
             default:
                 document.getElementById("rndmevent").innerHTML = "default";
