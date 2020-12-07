@@ -1,50 +1,59 @@
-body{
-    background-color: palevioletred;
-    text-align:center;
-    background-image: no-repeat;
-    background-size: cover;
-    font-weight: 700;
-    font-size: 20px;
-    margin: auto;
+html{
+    width: 100vw;
+    height:100vh;
+    overflow:hidden;
 }
-#container{
-    height: 700px;
-    width: 1802px;
-    margin: auto;
+body{
+    font-family: 'Raleway', sans-serif;
+    background: #f2709c;  /* fallback for old browsers /
+    background: -webkit-linear-gradient(to left, #ff9472, #f2709c);  / Chrome 10-25, Safari 5.1-6 /
+    background: linear-gradient(to left, #ff9472, #f2709c); / W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    text-align:center;
+    margin: 0 auto;
+    width:100%;
+    height:100%;
+}
+#info--container{
+    display:block;
+    z-index:10;
+    position:absolute;
+    top:0;
+    width:100%;
+    height:100%;
+    color:white;
+    background-color:rgba(0,0,0,0.85);
+
+}
+#main--container{
+    height: 100%;
+    width: 80%;
+    margin: 0 auto;
     border: solid black 1px;
 }
 header{
-    width:1802px; 
-    height: 40px;
+  width:100%;
+  height:3em;
+  background-color:rgba(0,0,0,0.85);
 }
 
 img{
-    margin: auto;
+    margin:0 auto;
 }
 section{
     float:left;
-    width: 600px;
-    height: 630px;
-    border: solid black 1px;
-    padding:5px;
+    width: 45%;
+    height: 89%;
 }
 footer{
     clear: both;
+    height:3vh;
+    margin:0 auto;
 }
-*{
-    box-sizing: border-box;
-    
-}
+
 
 button.invButton {
     color: var(--main-text-color);
-    
-}
 
-.border {
-    border: 3px solid white;
-    border-radius: 5px;
-    width: 100px;
 }
 
 #invWindow{
@@ -52,5 +61,13 @@ button.invButton {
 }
 #invList{
     margin: auto;
+    max-height:50%;
 }
 
+h3{
+  margin:0 auto;
+}
+#logo--wrapper{
+  background-image:url("es.png");
+
+}
