@@ -1,42 +1,52 @@
 <!DOCTYPE html>
 <html lang="pl">
+
 <head>
     <meta charset="UTF-8">
-    <title>Document</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yoink Industries Project</title>
     <link rel="stylesheet" href="style.css">
-	<link rel="shortcut icon" href="kot3.ico" type="image/x-icon" />
+    <link rel="shortcut icon" href="https://icons.iconarchive.com/icons/cjdowner/cryptocurrency-flat/128/ICON-ICX-icon.png" type="image/x-icon" />
+    <link rel="preconnect" href="https://fonts.gstatic.com/%22%3E
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&display=swap" rel="stylesheet">
+
 </head>
+
 <body>
-    <div id="container">
-        <header>Projekt</header>
-            <section>
-            <img src="es.png " width="550" height="350">
-            </section>
-            <section>
-            <img id="kot" src="kotek.gif"> 
-            
+
+    <div id="main--container">
+        <header>YoinkProject</header>
+
+        <section>
+            <img id="kot" src="kotek.gif">
+
             <p id="hpp">Player life: 100</p>
             <p id="hpk">Cat life:100</p>
-            <p id="rndmevent">random</p>
-            <button onclick="randomEvent()">RANDOM EVENT</button>
-            <button onclick="saszeta()">Saszeta</button>
+            <p id="rndmevent">Co się stanie się</p>
+            <button onclick="randomEvent()" id="random">RANDOM EVENT</button>
+            <button onclick="saszeta()" id="saszeta">Kocimiętka</button>
 
-                <p id="catstatus"></p>
-                <p id="playerstatus"></p>
-            
-            </section>
-            <section>
-            <p id="invWindow" class="inv border">Odkurzacz</p> 
-        
-            <button class="invButton border" onclick="invUse()">USE</button>	
+            <p id="catstatus"></p>
+            <p id="playerstatus"></p>
+            <p id="playerstatus2"></p>
+
+        </section>
+        <section id="list">
+            <h4 id="invWindow" class="inv border">Odkurzacz</h4>
+
+            <button class="invButton border" onclick="invUse()">USE</button>
             <button class="invButton border" onclick="invChange(-1)"><</button>
-            <button class="invButton border" onclick="invChange(1)">></button>
-            
-            <p id="invList" class="inv border">Odkurzacz<br>Ogórek<br>Cytryna<br></p> 
-            </section>
-            <footer>&copy; 2020</footer>
+                    <button class="invButton border" onclick="invChange(1)">></button>
+
+                    <p id="invList" class="inv border">Odkurzacz<br>Ogórek<br>Cytryna<br></p>
+        </section>
+        <footer> &copy; 2020</footer>
     </div>
+
+
+
+
     <script src="script.js"></script>
 </body>
-</html>
 
+</html>
