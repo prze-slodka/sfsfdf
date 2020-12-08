@@ -8,14 +8,14 @@ el_playerstatus = document.getElementById("playerstatus");
 el_invWindow = document.getElementById("invWindow");
 el_rndmevent = document.getElementById("rndmevent");
 el_playerstatus2 = document.getElementById('playerstatus2');
+/* skróty */
 
-
-inv = ["Cytryna", "Ogórek", "Odkurzacz", "Mleko", "Mięsko"];
+inv = ["Cytryna", "Ogórek", "Odkurzacz", "Mleko", "Mięsko"]; /* inventory */
 invindx = 0;
 
 
 
-function hit(dmg, bns) {
+function hit(dmg, bns) /* damage playera */ {
     hp += (dmg + bns);
     el_hpp.innerHTML = "Player life:" + hp;
     if (hp <= 2) {
@@ -37,7 +37,7 @@ function hit(dmg, bns) {
 }
 
 
-function saszeta() {
+function saszeta() /* heal potion */{
     sasz++;
     if (sasz%5 != 0) {
         hp += 10;
@@ -59,7 +59,7 @@ function saszeta() {
 
 }
 
-function update() {
+function update() /* update po śmierci playera */{
     document.getElementById("list").style.display="none";
     document.getElementById("saszeta").disabled = "disabled";
     document.getElementById("random").disabled = "disabled";
@@ -69,7 +69,7 @@ function update() {
 }
 
 
-function invUse() {
+function invUse() /* używanie przedmiów z inventory*/{
     switch (inv[invindx]) {
         case "Cytryna":
             hitk(-10, 0);
@@ -98,7 +98,7 @@ function invUse() {
     invListing();
     invChange(0);
 }
-function invChange(chng) {
+function invChange(chng) /* możliwość przewijania przemiotów z listy */{
     invindx += chng;
 
     if (inv.length != 0) {
@@ -115,7 +115,7 @@ function invChange(chng) {
     }
 
 }
-function invListing() {
+function invListing() /* sortowanie przedmiotów w inventory*/{
     inv.sort();
     var invL = "";
     var i = 0;
@@ -126,9 +126,9 @@ function invListing() {
     document.getElementById("invList").innerHTML = invL;
 }
 
-function randomEvent() {
+function randomEvent() /* random event*/ {
 
-    if (inv.length <= 20) {
+    if (inv.length <= 20) /* random event w przypadku gdy masz mniej niż 20 przedmiotów  w inventory*/ {
 
         switch (Math.ceil(Math.random() * 10)) {
             case 1:
@@ -191,7 +191,7 @@ function randomEvent() {
                 break;
         }
     }
-    else {
+    else /* random event w przypadku gdy masz więcej niż 20 przedmiotów w inventory*/ {
         console.log('else');
         el_playerstatus2.innerHTML = "Zbyt wiele przedmiotów, nie ryzykuj!";
         switch (Math.ceil(Math.random() * 4)) {
@@ -223,7 +223,7 @@ function randomEvent() {
 document.body.onload = invChange(0);
 document.body.onload = invListing();
 
-function hitk(dmg, bns) {
+function hitk(dmg, bns) /* damage bossa*/{
     hp += (dmg + bns);
     document.getElementById("hpk").innerHTML = "Cat life:" + hp;
     if (hp < 1) {
@@ -239,7 +239,7 @@ function hitk(dmg, bns) {
     document.getElementById("hpk").innerHTML = "Cat life:" + hp;
 }
 
-function update2() {
+function update2() /* update po śmierci bossa */{
     document.getElementById("kot").src = "bez.png";
     document.body.style.backgroundImage = "url('confetti.gif')";
 }
