@@ -14,32 +14,43 @@
 
 <body>
 
+    <audio id="music" autoplay loop>
+        <source src="music.mp3">
+
+    </audio>
+
+    </audio>
+
+
+
     <div id="main--container">
         <header><img src="yoink.png"></header>
 
         <section>
-            <img id="kot" src="kotek.gif">
+         <img id="kot" src="kotek.gif" style = "display:block; margin-left: auto; margin-right: auto;">
 
             <p id="hpp">Player life: 100</p>
             <p id="hpk">Cat life:100</p>
             <p id="rndmevent">Co się stanie się?</p>
-            <button onclick="randomEvent()" id="random">RANDOM EVENT</button>
-            <button onclick="saszeta()" id="saszeta">Kocimiętka</button>
+            <button onclick="randomEvent()" id="random" class="border">RANDOM EVENT</button>
+            <button onclick="saszeta()" id="saszeta" class="border">Kocimiętka</button>
 
             <p id="catstatus"></p>
             <p id="playerstatus"></p>
             <p id="playerstatus2"></p>
 
         </section>
+        <center>
         <section id="list">
-            <h4 id="invWindow" class="inv border">Odkurzacz</h4>
+            <h4 id="invWindow" class="border">Odkurzacz</h4>
 
-            <button class="invButton border" onclick="invUse()">USE</button>
-            <button class="invButton border" onclick="invChange(-1)"><</button>
-                    <button class="invButton border" onclick="invChange(1)">></button>
+            <button id="down" class="border" onclick="invUse()">USE</button>
+            <button id="down" class="border" onclick="invChange(-1)"><</button>
+                    <button id="down" class="border" onclick="invChange(1)">></button>
 
-                    <p id="invList" class="inv border">Odkurzacz<br>Ogórek<br>Cytryna<br></p>
+                    <p id="invList" class="inv border" >Odkurzacz<br>Ogórek<br>Cytryna<br></p>
         </section>
+    </center>
         <footer> &copy; 2020</footer>
     </div>
 
