@@ -243,3 +243,6 @@ function update2() /* update po śmierci bossa */{
     document.getElementById("kot").src = "bez.png";
     document.body.style.backgroundImage = "url('confetti.gif')";
 }
+
+
+document.getElementById("music").volume = 0.05;
