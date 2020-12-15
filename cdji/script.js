@@ -1,4 +1,4 @@
-var hp, inv, invindx, dmg, bns, el_hpp, el_playerstatus, el_invWindow, el_rndmevent, sasz;
+var hp, inv, invindx, dmg, bns, el_hpp, el_playerstatus, el_invWindow, el_rndmevent, sasz, el_mcont;
 
 hp = 100;
 sasz = 0;
@@ -8,6 +8,7 @@ el_playerstatus = document.getElementById("playerstatus");
 el_invWindow = document.getElementById("invWindow");
 el_rndmevent = document.getElementById("rndmevent");
 el_playerstatus2 = document.getElementById('playerstatus2');
+el_mcont = document.getElementById('main--container')
 /* skróty */
 
 inv = ["Cytryna", "Ogórek", "Odkurzacz", "Mleko", "Mięsko"]; /* inventory */
@@ -64,7 +65,8 @@ function update() /* update po śmierci playera */{
     document.getElementById("saszeta").disabled = "disabled";
     document.getElementById("random").disabled = "disabled";
     document.getElementById("kot").src = "https://media.discordapp.net/attachments/768055060567293962/776899946602430564/tenor.gif";
-    document.body.style.backgroundImage = "url('https://previews.123rf.com/images/ketalviktor/ketalviktor1807/ketalviktor180700019/105869092-stained-red-paint-similar-to-the-blood-on-a-white-background-.jpg')";
+    document.body.style.backgroundImage = "url('https://wallpapercave.com/wp/wp2778205.jpg')";
+    el_mcont.classList.add('dark-bg');
 
 }
 
@@ -242,6 +244,7 @@ function hitk(dmg, bns) /* damage bossa*/{
 function update2() /* update po śmierci bossa */{
     document.getElementById("kot").src = "bez.png";
     document.body.style.backgroundImage = "url('confetti.gif')";
+    el_mcont.classList.add('dark-bg');
 }
 
 
